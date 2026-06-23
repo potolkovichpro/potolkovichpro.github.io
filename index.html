@@ -18,6 +18,16 @@
 
 <style>
 
+  :root{
+--blue:#2563eb;
+--dark:#0f172a;
+--text:#111827;
+--gray:#6b7280;
+--light:#f6f8fc;
+--white:#ffffff;
+--green:#22c55e;
+}
+
 *{
 margin:0;
 padding:0;
@@ -25,10 +35,14 @@ box-sizing:border-box;
 scroll-behavior:smooth;
 }
 
+html{
+overflow-x:hidden;
+}
+
 body{
 font-family:'Inter',sans-serif;
-background:#f6f8fc;
-color:#111827;
+background:var(--light);
+color:var(--text);
 overflow-x:hidden;
 line-height:1.6;
 }
@@ -55,20 +69,21 @@ padding:100px 0;
 
 .section-label{
 text-align:center;
-color:#2563eb;
 font-size:14px;
 font-weight:800;
 letter-spacing:1px;
 text-transform:uppercase;
+color:var(--blue);
 margin-bottom:12px;
 }
 
 .section-title{
 text-align:center;
-font-size:56px;
+font-size:58px;
 font-weight:900;
 line-height:1.1;
 margin-bottom:60px;
+color:var(--dark);
 }
 
 .card{
@@ -86,11 +101,12 @@ border-radius:16px;
 font-weight:700;
 transition:.3s;
 cursor:pointer;
+border:none;
 }
 
 .btn-primary{
-background:#2563eb;
-color:#fff;
+background:var(--blue);
+color:white;
 }
 
 .btn-primary:hover{
@@ -98,8 +114,8 @@ transform:translateY(-3px);
 }
 
 .btn-secondary{
-background:#fff;
-color:#111827;
+background:white;
+color:var(--dark);
 }
 
 .btn-secondary:hover{
@@ -122,7 +138,7 @@ padding:25px 0;
 }
 
 .logo{
-width:200px;
+width:180px;
 }
 
 .nav-menu{
@@ -133,6 +149,11 @@ gap:35px;
 .nav-menu a{
 color:white;
 font-weight:600;
+transition:.3s;
+}
+
+.nav-menu a:hover{
+color:#dbeafe;
 }
 
 .nav-right{
@@ -151,15 +172,26 @@ color:white;
 }
 
 .phone-link i{
-color:#22c55e;
+color:var(--green);
+font-size:24px;
 }
 
 .social-link{
 display:flex;
 align-items:center;
 gap:8px;
-color:white;
 font-weight:600;
+color:white;
+}
+
+.social-link .fa-vk{
+color:#2787F5;
+font-size:22px;
+}
+
+.social-link .fa-telegram{
+color:#2AABEE;
+font-size:22px;
 }
 
 .hero{
@@ -167,10 +199,11 @@ min-height:100vh;
 display:flex;
 align-items:center;
 background:
-linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),
+linear-gradient(rgba(0,0,0,.10),rgba(0,0,0,.10)),
 url('hero.png');
 background-size:cover;
 background-position:center;
+position:relative;
 }
 
 .hero-content{
@@ -179,26 +212,27 @@ color:white;
 }
 
 .hero h1{
-font-size:82px;
+font-size:72px;
 font-weight:900;
-line-height:.95;
+line-height:1;
 margin-bottom:20px;
 }
 
 .hero h1 span{
-color:#2563eb;
+color:var(--blue);
 }
 
 .hero-subtitle{
 font-size:24px;
+font-weight:600;
 margin-bottom:30px;
 }
 
 .hero-features{
 display:flex;
-flex-wrap:wrap;
-gap:25px;
+gap:28px;
 margin-bottom:35px;
+flex-wrap:nowrap;
 }
 
 .hero-feature{
@@ -206,10 +240,12 @@ display:flex;
 align-items:center;
 gap:10px;
 font-weight:700;
+font-size:17px;
+white-space:nowrap;
 }
 
 .hero-feature i{
-color:#2563eb;
+font-size:22px;
 }
 
 .hero-buttons{
@@ -221,14 +257,14 @@ flex-wrap:wrap;
 .stats{
 margin-top:-70px;
 position:relative;
-z-index:10;
+z-index:50;
 }
 
 .stats-box{
 background:white;
 padding:35px;
-border-radius:24px;
-box-shadow:0 15px 40px rgba(0,0,0,.08);
+border-radius:26px;
+box-shadow:0 20px 50px rgba(0,0,0,.08);
 }
 
 .stats-grid{
@@ -241,21 +277,26 @@ gap:20px;
 display:flex;
 align-items:center;
 justify-content:center;
-gap:15px;
+gap:16px;
 }
 
 .stat-item i{
-font-size:40px;
-color:#2563eb;
+font-size:42px;
+color:var(--blue);
 }
 
 .stat-number{
-font-size:46px;
+font-size:44px;
 font-weight:900;
+line-height:1;
 }
 
-.services-grid,
-.features-grid{
+.stat-text{
+font-size:15px;
+color:var(--gray);
+}
+
+.services-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:25px;
@@ -263,10 +304,15 @@ gap:25px;
 
 .service-card{
 overflow:hidden;
+transition:.3s;
+}
+
+.service-card:hover{
+transform:translateY(-8px);
 }
 
 .service-card img{
-height:260px;
+height:250px;
 width:100%;
 object-fit:cover;
 }
@@ -276,8 +322,13 @@ padding:25px;
 }
 
 .service-content h3{
-font-size:22px;
+font-size:26px;
 margin-bottom:10px;
+font-weight:800;
+}
+
+.service-content p{
+color:var(--gray);
 }
 
 .works-grid{
@@ -293,7 +344,7 @@ border-radius:24px;
 }
 
 .work-card img{
-height:300px;
+height:320px;
 width:100%;
 object-fit:cover;
 transition:.4s;
@@ -309,24 +360,10 @@ left:0;
 right:0;
 bottom:0;
 padding:25px;
+background:linear-gradient(transparent,rgba(0,0,0,.92));
 color:white;
 font-size:22px;
 font-weight:700;
-background:linear-gradient(transparent,rgba(0,0,0,.9));
-}
-
-.feature-card{
-padding:30px;
-}
-
-.feature-card i{
-font-size:30px;
-color:#2563eb;
-margin-bottom:15px;
-}
-
-.feature-card h3{
-margin-bottom:10px;
 }
 
 .steps-grid{
@@ -336,21 +373,48 @@ gap:25px;
 }
 
 .step-card{
-padding:30px;
+padding:35px 25px;
 text-align:center;
 }
 
 .step-number{
-width:60px;
-height:60px;
+width:70px;
+height:70px;
 border-radius:50%;
-background:#2563eb;
+background:var(--blue);
 color:white;
 display:flex;
 align-items:center;
 justify-content:center;
+font-size:24px;
 font-weight:900;
 margin:0 auto 20px;
+}
+
+.step-card h3{
+margin-bottom:12px;
+font-size:22px;
+}
+
+.features-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.feature-card{
+padding:30px;
+}
+
+.feature-card i{
+font-size:32px;
+color:var(--blue);
+margin-bottom:15px;
+}
+
+.feature-card h3{
+font-size:22px;
+margin-bottom:10px;
 }
 
 .reviews-grid{
@@ -365,767 +429,9 @@ padding:30px;
 
 .review-stars{
 color:#fbbf24;
-font-size:20px;
+font-size:22px;
 margin-bottom:15px;
 }
-
-</style>
-</head>
-<body>
-
-<header>
-
-<div class="container">
-
-<div class="navbar">
-
-<a href="#">
-<img src="logo.png" class="logo" alt="Потолкович-ПРО">
-</a>
-
-<nav class="nav-menu">
-
-<a href="#services">Услуги</a>
-<a href="#works">Работы</a>
-<a href="#process">Как работаем</a>
-<a href="#advantages">Преимущества</a>
-<a href="#contacts">Контакты</a>
-
-</nav>
-
-<div class="nav-right">
-
-<a href="tel:+79517374433" class="phone-link">
-<i class="fa-solid fa-phone"></i>
-+7 (951) 737-44-33
-</a>
-
-<a href="https://vk.com/club171564683" target="_blank" class="social-link">
-<i class="fa-brands fa-vk"></i>
-ВК
-</a>
-
-<a href="https://t.me/potolkovich_pro" target="_blank" class="social-link">
-<i class="fa-brands fa-telegram"></i>
-Telegram
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</header>
-
-<section class="hero">
-
-<div class="container">
-
-<div class="hero-content">
-
-<h1>
-НАТЯЖНЫЕ<br>
-<span>ПОТОЛКИ</span><br>
-В ВОЛОГДЕ И ОБЛАСТИ
-</h1>
-
-<p class="hero-subtitle">
-Бесплатный замер • Монтаж за 1 день • Гарантия 15 лет
-</p>
-
-<div class="hero-features">
-
-<div class="hero-feature">
-<i class="fa-solid fa-shield-halved" style="color:#22c55e;"></i>
-<span>15 лет гарантии</span>
-</div>
-
-<div class="hero-feature">
-<i class="fa-solid fa-ruler-combined" style="color:#f59e0b;"></i>
-<span>Бесплатный замер</span>
-</div>
-
-<div class="hero-feature">
-<i class="fa-solid fa-bolt" style="color:#3b82f6;"></i>
-<span>Монтаж за 1 день</span>
-</div>
-
-<div class="hero-feature">
-<i class="fa-solid fa-trophy" style="color:#9333ea;"></i>
-<span>1000+ объектов</span>
-</div>
-
-</div>
-
-<div class="hero-buttons">
-
-<a href="#contacts" class="btn btn-primary">
-Получить бесплатный замер
-</a>
-
-<a href="#calculator" class="btn btn-secondary">
-Рассчитать стоимость
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="stats">
-
-<div class="container">
-
-<div class="stats-box">
-
-<div class="stats-grid">
-
-<div class="stat-item">
-
-<i class="fa-solid fa-house"></i>
-
-<div>
-<div class="stat-number">1000+</div>
-<div>Объектов</div>
-</div>
-
-</div>
-
-<div class="stat-item">
-
-<i class="fa-solid fa-medal"></i>
-
-<div>
-<div class="stat-number">7+</div>
-<div>Лет опыта</div>
-</div>
-
-</div>
-
-<div class="stat-item">
-
-<i class="fa-solid fa-shield-halved"></i>
-
-<div>
-<div class="stat-number">15</div>
-<div>Лет гарантии</div>
-</div>
-
-</div>
-
-<div class="stat-item">
-
-<i class="fa-solid fa-clock"></i>
-
-<div>
-<div class="stat-number">1</div>
-<div>День монтажа</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="services">
-
-<div class="container">
-
-<div class="section-label">
-НАШИ УСЛУГИ
-</div>
-
-<h2 class="section-title">
-Виды натяжных потолков
-</h2>
-
-<div class="services-grid">
-
-<div class="card service-card">
-<img src="service1.jpg">
-<div class="service-content">
-<h3>Матовые потолки</h3>
-<p>Классическое решение для любого помещения.</p>
-</div>
-</div>
-
-<div class="card service-card">
-<img src="service2.jpg">
-<div class="service-content">
-<h3>Световые линии</h3>
-<p>Современное дизайнерское освещение.</p>
-</div>
-</div>
-
-<div class="card service-card">
-<img src="service3.jpg">
-<div class="service-content">
-<h3>Парящие потолки</h3>
-<p>Эффект лёгкости и скрытой подсветки.</p>
-</div>
-</div>
-
-<div class="card service-card">
-<img src="service4.jpg">
-<div class="service-content">
-<h3>Теневой профиль</h3>
-<p>Премиальное решение без вставок.</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="works">
-
-<div class="container">
-
-<div class="section-label">
-НАШИ РАБОТЫ
-</div>
-
-<h2 class="section-title">
-Последние выполненные проекты
-</h2>
-
-<div class="works-grid">
-
-<div class="work-card">
-<img src="work1.jpg" alt="Световые линии">
-<div class="work-overlay">
-Световые линии
-</div>
-</div>
-
-<div class="work-card">
-<img src="work2.jpg" alt="Парящий потолок">
-<div class="work-overlay">
-Парящий потолок
-</div>
-</div>
-
-<div class="work-card">
-<img src="work3.jpg" alt="Теневой профиль">
-<div class="work-overlay">
-Теневой профиль
-</div>
-</div>
-
-<div class="work-card">
-<img src="work4.jpg" alt="Гостиная">
-<div class="work-overlay">
-Гостиная
-</div>
-</div>
-
-<div class="work-card">
-<img src="work5.jpg" alt="Кухня">
-<div class="work-overlay">
-Кухня
-</div>
-</div>
-
-<div class="work-card">
-<img src="work6.jpg" alt="Спальня">
-<div class="work-overlay">
-Спальня
-</div>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="process">
-
-<div class="container">
-
-<div class="section-label">
-КАК МЫ РАБОТАЕМ
-</div>
-
-<h2 class="section-title">
-От звонка до готового потолка
-</h2>
-
-<div class="steps-grid">
-
-<div class="card step-card">
-
-<div class="step-number">1</div>
-
-<h3>Заявка</h3>
-
-<p>
-Вы оставляете заявку на сайте или по телефону.
-</p>
-
-</div>
-
-<div class="card step-card">
-
-<div class="step-number">2</div>
-
-<h3>Замер</h3>
-
-<p>
-Бесплатно приезжаем и производим точные замеры.
-</p>
-
-</div>
-
-<div class="card step-card">
-
-<div class="step-number">3</div>
-
-<h3>Расчёт</h3>
-
-<p>
-Согласовываем стоимость и материалы.
-</p>
-
-</div>
-
-<div class="card step-card">
-
-<div class="step-number">4</div>
-
-<h3>Монтаж</h3>
-
-<p>
-Устанавливаем потолок в удобный день.
-</p>
-
-</div>
-
-<div class="card step-card">
-
-<div class="step-number">5</div>
-
-<h3>Готово</h3>
-
-<p>
-Принимаете работу и получаете гарантию.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="advantages">
-
-<div class="container">
-
-<div class="section-label">
-ПОЧЕМУ ВЫБИРАЮТ НАС
-</div>
-
-<h2 class="section-title">
-Наши преимущества
-</h2>
-
-<div class="features-grid">
-
-<div class="card feature-card">
-
-<i class="fa-solid fa-shield-halved"></i>
-
-<h3>Гарантия 15 лет</h3>
-
-<p>
-Официальная гарантия на материалы и монтаж.
-</p>
-
-</div>
-
-<div class="card feature-card">
-
-<i class="fa-solid fa-ruler-combined"></i>
-
-<h3>Бесплатный замер</h3>
-
-<p>
-Выезд специалиста по Вологде и области.
-</p>
-
-</div>
-
-<div class="card feature-card">
-
-<i class="fa-solid fa-bolt"></i>
-
-<h3>Монтаж за 1 день</h3>
-
-<p>
-Большинство объектов выполняем за один день.
-</p>
-
-</div>
-
-<div class="card feature-card">
-
-<i class="fa-solid fa-award"></i>
-
-<h3>1000+ объектов</h3>
-
-<p>
-Большой опыт установки потолков любой сложности.
-</p>
-
-</div>
-
-<div class="card feature-card">
-
-<i class="fa-solid fa-file-signature"></i>
-
-<h3>Работа по договору</h3>
-
-<p>
-Все условия фиксируются документально.
-</p>
-
-</div>
-
-<div class="card feature-card">
-
-<i class="fa-solid fa-screwdriver-wrench"></i>
-
-<h3>Качественные материалы</h3>
-
-<p>
-Используем только проверенные комплектующие.
-</p>
-
-</div>
-
-<div class="card feature-card">
-
-<i class="fa-solid fa-broom"></i>
-
-<h3>Чистый монтаж</h3>
-
-<p>
-После работы оставляем помещение чистым.
-</p>
-
-</div>
-
-<div class="card feature-card">
-
-<i class="fa-solid fa-headset"></i>
-
-<h3>Поддержка клиентов</h3>
-
-<p>
-Всегда остаёмся на связи после монтажа.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="reviews">
-
-<div class="container">
-
-<div class="section-label">
-ОТЗЫВЫ КЛИЕНТОВ
-</div>
-
-<h2 class="section-title">
-Что говорят наши заказчики
-</h2>
-
-<div class="reviews-grid">
-
-<div class="card review-card">
-
-<div class="review-stars">
-★★★★★
-</div>
-
-<p>
-Сделали потолок за один день.
-Очень аккуратно и качественно.
-Результат превзошёл ожидания.
-</p>
-
-<h4 style="margin-top:20px;">
-Александр
-</h4>
-
-</div>
-
-<div class="card review-card">
-
-<div class="review-stars">
-★★★★★
-</div>
-
-<p>
-Заказывали световые линии.
-Получилось очень красиво и современно.
-Спасибо за работу.
-</p>
-
-<h4 style="margin-top:20px;">
-Елена
-</h4>
-
-</div>
-
-<div class="card review-card">
-
-<div class="review-stars">
-★★★★★
-</div>
-
-<p>
-Стоимость после замера не изменилась.
-Монтаж быстрый и профессиональный.
-Рекомендую.
-</p>
-
-<h4 style="margin-top:20px;">
-Сергей
-</h4>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="calculator">
-
-<div class="container">
-
-<div class="section-label">
-КАЛЬКУЛЯТОР СТОИМОСТИ
-</div>
-
-<h2 class="section-title">
-Рассчитать стоимость потолка
-</h2>
-
-<div class="calculator-wrap">
-
-<div class="card calculator-box">
-
-<div class="form-group">
-
-<label>Площадь помещения (м²)</label>
-
-<input
-type="number"
-id="area"
-placeholder="Например: 20">
-
-</div>
-
-<div class="form-group">
-
-<label>Тип потолка</label>
-
-<select id="ceilingType">
-
-<option value="700">Матовый потолок</option>
-<option value="800">Сатиновый потолок</option>
-<option value="900">Глянцевый потолок</option>
-<option value="1200">Тканевый потолок</option>
-
-</select>
-
-</div>
-
-<div class="form-group">
-
-<label>Освещение</label>
-
-<select id="lighting">
-
-<option value="0">Без освещения</option>
-<option value="3000">До 5 светильников</option>
-<option value="6000">6–10 светильников</option>
-<option value="10000">Световые линии</option>
-
-</select>
-
-</div>
-
-<button
-class="btn btn-primary"
-onclick="calculatePrice()">
-
-Рассчитать стоимость
-
-</button>
-
-</div>
-
-<div class="result-box">
-
-<h3>
-Предварительная стоимость
-</h3>
-
-<div id="result">
-Введите параметры
-</div>
-
-<p>
-Точная стоимость рассчитывается после бесплатного замера.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="contacts">
-
-<div class="container">
-
-<div class="card contacts-box">
-
-<div class="section-label">
-КОНТАКТЫ
-</div>
-
-<h2>
-Получите бесплатный замер
-</h2>
-
-<p class="contacts-text">
-Работаем по Вологде и Вологодской области
-</p>
-
-<div class="contacts-phone">
-
-<a href="tel:+79517374433">
-
-<i class="fa-solid fa-phone"></i>
-
-+7 (951) 737-44-33
-
-</a>
-
-</div>
-
-<div class="contacts-list">
-
-✓ Бесплатный замер<br>
-✓ Монтаж за 1 день<br>
-✓ Более 1000 выполненных объектов
-
-</div>
-
-<div class="contact-buttons">
-
-<a href="tel:+79517374433" class="btn btn-primary">
-Позвонить
-</a>
-
-<a
-href="https://t.me/potolkovich_pro"
-target="_blank"
-class="btn btn-secondary">
-
-<i class="fa-brands fa-telegram"></i>
-Telegram
-
-</a>
-
-<a
-href="https://vk.com/club171564683"
-target="_blank"
-class="btn btn-secondary">
-
-<i class="fa-brands fa-vk"></i>
-ВКонтакте
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-<div class="container">
-
-<div class="footer-grid">
-
-<div>
-
-<h3>
-Потолкович-ПРО
-</h3>
-
-<p>
-Натяжные потолки в Вологде и области
-</p>
-
-</div>
-
-<div>
-
-<a
-href="tel:+79517374433"
-class="footer-phone">
-
-<i class="fa-solid fa-phone"></i>
-
-+7 (951) 737-44-33
-
-</a>
-
-</div>
-
-</div>
-
-<div class="copyright">
-
-© 2026 Потолкович-ПРО. Все права защищены.
-
-</div>
-
-</div>
-
-</footer>
-
-<style>
 
 .calculator-wrap{
 display:grid;
@@ -1154,10 +460,11 @@ padding:18px;
 border:1px solid #dbe2ea;
 border-radius:12px;
 font-size:16px;
+background:white;
 }
 
 .result-box{
-background:#2563eb;
+background:var(--blue);
 color:white;
 border-radius:24px;
 padding:40px;
@@ -1178,39 +485,39 @@ margin-bottom:20px;
 }
 
 .contacts-box{
-padding:60px;
+padding:70px;
 text-align:center;
 }
 
 .contacts-box h2{
-font-size:48px;
+font-size:54px;
 font-weight:900;
 margin-bottom:15px;
 }
 
 .contacts-text{
-font-size:20px;
-color:#666;
+font-size:22px;
+color:var(--gray);
 margin-bottom:25px;
 }
 
 .contacts-phone{
-font-size:36px;
+font-size:40px;
 font-weight:900;
 margin-bottom:25px;
 }
 
 .contacts-phone a{
-color:#2563eb;
+color:var(--blue);
 }
 
 .contacts-phone i{
-color:#22c55e;
+color:var(--green);
 margin-right:10px;
 }
 
 .contacts-list{
-font-size:18px;
+font-size:20px;
 line-height:2;
 margin-bottom:35px;
 }
@@ -1225,7 +532,7 @@ flex-wrap:wrap;
 footer{
 background:#071633;
 color:white;
-padding:70px 0;
+padding:80px 0;
 margin-top:80px;
 }
 
@@ -1249,7 +556,7 @@ color:white;
 }
 
 .footer-phone i{
-color:#22c55e;
+color:var(--green);
 margin-right:10px;
 }
 
@@ -1271,6 +578,10 @@ opacity:.7;
 grid-template-columns:1fr 1fr;
 }
 
+.hero-features{
+flex-wrap:wrap;
+}
+
 }
 
 @media(max-width:768px){
@@ -1279,12 +590,25 @@ grid-template-columns:1fr 1fr;
 display:none;
 }
 
+.nav-right{
+gap:10px;
+}
+
+.logo{
+width:140px;
+}
+
 .hero h1{
 font-size:48px;
 }
 
 .hero-subtitle{
-font-size:20px;
+font-size:18px;
+}
+
+.hero-features{
+flex-direction:column;
+gap:12px;
 }
 
 .hero-buttons{
@@ -1302,7 +626,11 @@ grid-template-columns:1fr;
 }
 
 .section-title{
-font-size:36px;
+font-size:38px;
+}
+
+.contacts-box{
+padding:40px 25px;
 }
 
 .contacts-box h2{
@@ -1316,35 +644,789 @@ font-size:28px;
 }
 
 </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav class="navbar">
+
+            <a href="#">
+                <img src="logo.png" alt="Потолкович-ПРО" class="logo">
+            </a>
+
+            <div class="nav-menu">
+                <a href="#services">Услуги</a>
+                <a href="#works">Работы</a>
+                <a href="#steps">Как работаем</a>
+                <a href="#advantages">Преимущества</a>
+                <a href="#contacts">Контакты</a>
+            </div>
+
+            <div class="nav-right">
+
+                <a href="tel:+79517374433" class="phone-link">
+                    <i class="fa-solid fa-phone"></i>
+                    +7 (951) 737-44-33
+                </a>
+
+                <a href="https://vk.com/club171564683" target="_blank" class="social-link">
+                    <i class="fa-brands fa-vk"></i>
+                    ВК
+                </a>
+
+                <a href="https://t.me/potolkovich_pro" target="_blank" class="social-link">
+                    <i class="fa-brands fa-telegram"></i>
+                    Telegram
+                </a>
+
+            </div>
+
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <h1>
+                НАТЯЖНЫЕ<br>
+                <span>ПОТОЛКИ</span><br>
+                В ВОЛОГДЕ И ОБЛАСТИ
+            </h1>
+
+            <div class="hero-subtitle">
+                Бесплатный замер • Монтаж за 1 день • Гарантия 15 лет
+            </div>
+
+            <div class="hero-features">
+
+                <div class="hero-feature">
+                    <i class="fa-solid fa-shield-halved" style="color:#22c55e;"></i>
+                    15 лет гарантии
+                </div>
+
+                <div class="hero-feature">
+                    <i class="fa-solid fa-ruler-combined" style="color:#f59e0b;"></i>
+                    Бесплатный замер
+                </div>
+
+                <div class="hero-feature">
+                    <i class="fa-solid fa-bolt" style="color:#3b82f6;"></i>
+                    Монтаж за 1 день
+                </div>
+
+                <div class="hero-feature">
+                    <i class="fa-solid fa-trophy" style="color:#9333ea;"></i>
+                    1000+ объектов
+                </div>
+
+            </div>
+
+            <div class="hero-buttons">
+
+                <a href="#contacts" class="btn btn-primary">
+                    Получить бесплатный замер
+                </a>
+
+                <a href="#calculator" class="btn btn-secondary">
+                    Рассчитать стоимость
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="stats">
+
+    <div class="container">
+
+        <div class="stats-box">
+
+            <div class="stats-grid">
+
+                <div class="stat-item">
+                    <i class="fa-solid fa-house"></i>
+                    <div>
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-text">Выполненных объектов</div>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <i class="fa-solid fa-medal"></i>
+                    <div>
+                        <div class="stat-number">7+</div>
+                        <div class="stat-text">Лет опыта</div>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <div>
+                        <div class="stat-number">15</div>
+                        <div class="stat-text">Лет гарантии</div>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <i class="fa-regular fa-clock"></i>
+                    <div>
+                        <div class="stat-number">1</div>
+                        <div class="stat-text">День монтажа</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="services">
+
+    <div class="container">
+
+        <div class="section-label">
+            НАШИ УСЛУГИ
+        </div>
+
+        <h2 class="section-title">
+            Виды натяжных потолков
+        </h2>
+
+        <div class="services-grid">
+
+            <div class="card service-card">
+
+                <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200" alt="Матовые потолки">
+
+                <div class="service-content">
+                    <h3>Матовые потолки</h3>
+                    <p>
+                        Классическое решение для квартиры,
+                        дома или офиса.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="card service-card">
+
+                <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200" alt="Световые линии">
+
+                <div class="service-content">
+                    <h3>Световые линии</h3>
+                    <p>
+                        Современное дизайнерское освещение
+                        для стильных интерьеров.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="card service-card">
+
+                <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200" alt="Парящие потолки">
+
+                <div class="service-content">
+                    <h3>Парящие потолки</h3>
+                    <p>
+                        Эффект лёгкости и скрытой
+                        подсветки по всему периметру.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="card service-card">
+
+                <img src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?w=1200" alt="Теневой профиль">
+
+                <div class="service-content">
+                    <h3>Теневой профиль</h3>
+                    <p>
+                        Премиальное решение без
+                        маскировочной вставки.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="works">
+
+    <div class="container">
+
+        <div class="section-label">
+            НАШИ РАБОТЫ
+        </div>
+
+        <h2 class="section-title">
+            Последние выполненные проекты
+        </h2>
+
+        <div class="works-grid">
+
+            <div class="work-card">
+                <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200" alt="">
+                <div class="work-overlay">
+                    Световые линии
+                </div>
+            </div>
+
+            <div class="work-card">
+                <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200" alt="">
+                <div class="work-overlay">
+                    Парящий потолок
+                </div>
+            </div>
+
+            <div class="work-card">
+                <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200" alt="">
+                <div class="work-overlay">
+                    Теневой профиль
+                </div>
+            </div>
+
+            <div class="work-card">
+                <img src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?w=1200" alt="">
+                <div class="work-overlay">
+                    Гостиная
+                </div>
+            </div>
+
+            <div class="work-card">
+                <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200" alt="">
+                <div class="work-overlay">
+                    Кухня
+                </div>
+            </div>
+
+            <div class="work-card">
+                <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200" alt="">
+                <div class="work-overlay">
+                    Спальня
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="steps">
+
+    <div class="container">
+
+        <div class="section-label">
+            КАК МЫ РАБОТАЕМ
+        </div>
+
+        <h2 class="section-title">
+            Всего 5 простых шагов
+        </h2>
+
+        <div class="steps-grid">
+
+            <div class="card step-card">
+                <div class="step-number">1</div>
+                <h3>Заявка</h3>
+                <p>
+                    Оставляете заявку на сайте
+                    или звоните нам.
+                </p>
+            </div>
+
+            <div class="card step-card">
+                <div class="step-number">2</div>
+                <h3>Замер</h3>
+                <p>
+                    Бесплатный выезд специалиста
+                    на объект.
+                </p>
+            </div>
+
+            <div class="card step-card">
+                <div class="step-number">3</div>
+                <h3>Договор</h3>
+                <p>
+                    Согласовываем стоимость
+                    и сроки выполнения.
+                </p>
+            </div>
+
+            <div class="card step-card">
+                <div class="step-number">4</div>
+                <h3>Монтаж</h3>
+                <p>
+                    Выполняем установку
+                    потолка за 1 день.
+                </p>
+            </div>
+
+            <div class="card step-card">
+                <div class="step-number">5</div>
+                <h3>Сдача</h3>
+                <p>
+                    Проверка качества
+                    и гарантия на работы.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="advantages">
+
+    <div class="container">
+
+        <div class="section-label">
+            ПОЧЕМУ ВЫБИРАЮТ НАС
+        </div>
+
+        <h2 class="section-title">
+            Почему нам доверяют
+        </h2>
+
+        <div class="features-grid">
+
+            <div class="card feature-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Гарантия 15 лет</h3>
+                <p>
+                    Официальная гарантия
+                    на материалы и монтаж.
+                </p>
+            </div>
+
+            <div class="card feature-card">
+                <i class="fa-solid fa-ruler-combined"></i>
+                <h3>Бесплатный замер</h3>
+                <p>
+                    Выезд специалиста по Вологде
+                    и области бесплатно.
+                </p>
+            </div>
+
+            <div class="card feature-card">
+                <i class="fa-solid fa-bolt"></i>
+                <h3>Монтаж за 1 день</h3>
+                <p>
+                    Большинство объектов
+                    выполняем за один день.
+                </p>
+            </div>
+
+            <div class="card feature-card">
+                <i class="fa-solid fa-trophy"></i>
+                <h3>1000+ объектов</h3>
+                <p>
+                    Большой опыт установки
+                    потолков любой сложности.
+                </p>
+            </div>
+
+            <div class="card feature-card">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <h3>Качественные материалы</h3>
+                <p>
+                    Используем только проверенные
+                    комплектующие.
+                </p>
+            </div>
+
+            <div class="card feature-card">
+                <i class="fa-solid fa-file-signature"></i>
+                <h3>Договор</h3>
+                <p>
+                    Все работы выполняются
+                    официально.
+                </p>
+            </div>
+
+            <div class="card feature-card">
+                <i class="fa-solid fa-broom"></i>
+                <h3>Чистый монтаж</h3>
+                <p>
+                    Аккуратная работа и уборка
+                    после установки.
+                </p>
+            </div>
+
+            <div class="card feature-card">
+                <i class="fa-solid fa-headset"></i>
+                <h3>Поддержка</h3>
+                <p>
+                    Всегда остаёмся на связи
+                    после монтажа.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="reviews">
+
+    <div class="container">
+
+        <div class="section-label">
+            ОТЗЫВЫ КЛИЕНТОВ
+        </div>
+
+        <h2 class="section-title">
+            Что говорят наши заказчики
+        </h2>
+
+        <div class="reviews-grid">
+
+            <div class="card review-card">
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    Сделали потолок в гостиной за один день.
+                    Всё аккуратно и качественно.
+                    Результатом очень довольны.
+                </p>
+
+                <br>
+
+                <strong>Александр</strong>
+
+            </div>
+
+            <div class="card review-card">
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    Заказывали световые линии.
+                    Получилось очень красиво
+                    и современно.
+                </p>
+
+                <br>
+
+                <strong>Елена</strong>
+
+            </div>
+
+            <div class="card review-card">
+
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    Цена после замера не изменилась.
+                    Монтажники приехали вовремя
+                    и сделали всё быстро.
+                </p>
+
+                <br>
+
+                <strong>Сергей</strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="calculator">
+
+    <div class="container">
+
+        <div class="section-label">
+            КАЛЬКУЛЯТОР СТОИМОСТИ
+        </div>
+
+        <h2 class="section-title">
+            Рассчитать стоимость потолка
+        </h2>
+
+        <div class="calculator-wrap">
+
+            <div class="card calculator-box">
+
+                <div class="form-group">
+
+                    <label>
+                        Площадь помещения (м²)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="area"
+                        placeholder="Например: 20">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+                        Тип потолка
+                    </label>
+
+                    <select id="ceilingType">
+
+                        <option value="700">
+                            Матовый потолок
+                        </option>
+
+                        <option value="800">
+                            Сатиновый потолок
+                        </option>
+
+                        <option value="900">
+                            Глянцевый потолок
+                        </option>
+
+                        <option value="1200">
+                            Тканевый потолок
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+                        Освещение
+                    </label>
+
+                    <select id="lighting">
+
+                        <option value="0">
+                            Без освещения
+                        </option>
+
+                        <option value="3000">
+                            До 5 светильников
+                        </option>
+
+                        <option value="6000">
+                            До 10 светильников
+                        </option>
+
+                        <option value="10000">
+                            Световые линии
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <button
+                    class="btn btn-primary"
+                    onclick="calculatePrice()">
+
+                    Рассчитать стоимость
+
+                </button>
+
+            </div>
+
+            <div class="result-box">
+
+                <h3>
+                    Предварительная стоимость
+                </h3>
+
+                <div id="result">
+                    Введите параметры
+                </div>
+
+                <p>
+                    Точная стоимость определяется
+                    после бесплатного замера.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contacts">
+
+    <div class="container">
+
+        <div class="card contacts-box">
+
+            <div class="section-label">
+                КОНТАКТЫ
+            </div>
+
+            <h2>
+                Получите бесплатный замер
+            </h2>
+
+            <p class="contacts-text">
+                Работаем по Вологде и Вологодской области
+            </p>
+
+            <div class="contacts-phone">
+
+                <a href="tel:+79517374433">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    +7 (951) 737-44-33
+
+                </a>
+
+            </div>
+
+            <div class="contacts-list">
+
+                ✓ Бесплатный замер<br>
+                ✓ Монтаж за 1 день<br>
+                ✓ Более 1000 выполненных объектов<br>
+                ✓ Гарантия до 15 лет
+
+            </div>
+
+            <div class="contact-buttons">
+
+                <a
+                    href="tel:+79517374433"
+                    class="btn btn-primary">
+
+                    Позвонить
+
+                </a>
+
+                <a
+                    href="https://t.me/potolkovich_pro"
+                    target="_blank"
+                    class="btn btn-secondary">
+
+                    <i class="fa-brands fa-telegram"></i>
+                    Telegram
+
+                </a>
+
+                <a
+                    href="https://vk.com/club171564683"
+                    target="_blank"
+                    class="btn btn-secondary">
+
+                    <i class="fa-brands fa-vk"></i>
+                    ВКонтакте
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h3>
+                    Потолкович-ПРО
+                </h3>
+
+                <p>
+                    Натяжные потолки в Вологде и области
+                </p>
+
+            </div>
+
+            <div>
+
+                <a
+                    href="tel:+79517374433"
+                    class="footer-phone">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    +7 (951) 737-44-33
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+
+            © 2026 Потолкович-ПРО.
+            Все права защищены.
+
+        </div>
+
+    </div>
+
+</footer>
 
 <script>
 
 function calculatePrice(){
 
-const area =
-Number(document.getElementById('area').value);
+    const area =
+    Number(document.getElementById('area').value);
 
-const ceiling =
-Number(document.getElementById('ceilingType').value);
+    const ceiling =
+    Number(document.getElementById('ceilingType').value);
 
-const lighting =
-Number(document.getElementById('lighting').value);
+    const lighting =
+    Number(document.getElementById('lighting').value);
 
-if(area <= 0){
+    if(area <= 0){
 
-document.getElementById('result').innerHTML =
-'Введите площадь';
+        document.getElementById('result').innerHTML =
+        'Введите площадь';
 
-return;
+        return;
+    }
 
-}
+    const total =
+    (area * ceiling) + lighting;
 
-const total =
-(area * ceiling) + lighting;
-
-document.getElementById('result').innerHTML =
-total.toLocaleString('ru-RU') + ' ₽';
-
+    document.getElementById('result').innerHTML =
+    total.toLocaleString('ru-RU') + ' ₽';
 }
 
 </script>
