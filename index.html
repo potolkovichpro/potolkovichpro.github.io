@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Потолкович-ПРО | Натяжные потолки в Вологде</title>
 
-<meta name="description" content="Натяжные потолки в Вологде и области. Бесплатный замер, гарантия 15 лет, монтаж за 1 день. Световые линии, парящие потолки, теневой профиль.">
+<meta name="description" content="Натяжные потолки в Вологде и области. Бесплатный замер, гарантия 15 лет, монтаж за 1 день. Световые линии, парящие потолки и теневой профиль.">
+
+<meta name="keywords" content="натяжные потолки Вологда, потолки Вологда, световые линии, парящие потолки, теневой профиль">
 
 <link rel="icon" href="favicon.png">
 
@@ -28,29 +31,21 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Inter',sans-serif;
-background:#f5f7fb;
-color:#111;
-line-height:1.6;
+background:#f6f8fc;
+color:#111827;
 overflow-x:hidden;
+line-height:1.6;
 }
 
 .container{
 width:90%;
-max-width:1280px;
+max-width:1300px;
 margin:auto;
 }
 
-section{
-padding:90px 0;
-}
-
-h1,h2,h3,h4{
-line-height:1.1;
-}
-
 img{
-max-width:100%;
 display:block;
+max-width:100%;
 }
 
 a{
@@ -58,44 +53,17 @@ text-decoration:none;
 color:inherit;
 }
 
-.btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:18px 34px;
-border-radius:14px;
-font-weight:700;
-transition:.3s;
-cursor:pointer;
-border:none;
-}
-
-.btn-primary{
-background:#2563eb;
-color:white;
-}
-
-.btn-primary:hover{
-background:#1d4ed8;
-transform:translateY(-2px);
-}
-
-.btn-secondary{
-background:white;
-color:#111;
-}
-
-.btn-secondary:hover{
-transform:translateY(-2px);
+section{
+padding:100px 0;
 }
 
 .section-label{
 color:#2563eb;
 font-size:14px;
-font-weight:700;
+font-weight:800;
 text-transform:uppercase;
-margin-bottom:15px;
 text-align:center;
+margin-bottom:12px;
 }
 
 .section-title{
@@ -103,12 +71,46 @@ font-size:56px;
 font-weight:900;
 text-align:center;
 margin-bottom:60px;
+line-height:1.1;
 }
 
 .card{
-background:white;
+background:#fff;
 border-radius:24px;
-box-shadow:0 10px 30px rgba(0,0,0,.05);
+box-shadow:0 15px 40px rgba(0,0,0,.06);
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:12px;
+padding:18px 34px;
+border-radius:16px;
+font-weight:700;
+font-size:17px;
+cursor:pointer;
+transition:.3s;
+border:none;
+}
+
+.btn-primary{
+background:#2563eb;
+color:#fff;
+}
+
+.btn-primary:hover{
+transform:translateY(-3px);
+background:#1d4ed8;
+}
+
+.btn-secondary{
+background:#fff;
+color:#111;
+}
+
+.btn-secondary:hover{
+transform:translateY(-3px);
 }
 
 header{
@@ -127,17 +129,17 @@ padding:25px 0;
 }
 
 .logo{
-width:170px;
+width:190px;
 }
 
 .nav-menu{
 display:flex;
 gap:35px;
-font-weight:600;
-color:white;
 }
 
 .nav-menu a{
+color:white;
+font-weight:600;
 transition:.3s;
 }
 
@@ -148,7 +150,7 @@ color:#60a5fa;
 .nav-right{
 display:flex;
 align-items:center;
-gap:22px;
+gap:24px;
 }
 
 .phone-link{
@@ -156,16 +158,19 @@ display:flex;
 align-items:center;
 gap:10px;
 font-size:18px;
-font-weight:700;
+font-weight:800;
 color:white;
 }
 
 .phone-link i{
 color:#22c55e;
-font-size:18px;
+font-size:20px;
 }
 
 .social-link{
+display:flex;
+align-items:center;
+gap:8px;
 color:white;
 font-weight:600;
 transition:.3s;
@@ -181,7 +186,10 @@ min-height:100vh;
 display:flex;
 align-items:center;
 background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+linear-gradient(
+rgba(0,0,0,.35),
+rgba(0,0,0,.35)
+),
 url('hero.png');
 background-size:cover;
 background-position:center;
@@ -193,70 +201,93 @@ color:white;
 }
 
 .hero h1{
-font-size:88px;
+font-size:96px;
 font-weight:900;
-line-height:0.95;
+line-height:.95;
+letter-spacing:-2px;
 margin-bottom:25px;
 }
 
+.hero h1 span{
+color:#2563eb;
+}
+
 .hero-subtitle{
-font-size:28px;
-font-weight:400;
+font-size:26px;
+margin-bottom:35px;
+font-weight:500;
+}
+
+.hero-features{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
 margin-bottom:40px;
-opacity:.95;
+}
+
+.hero-feature{
+display:flex;
+align-items:center;
+gap:12px;
+font-weight:700;
+font-size:18px;
+}
+
+.hero-feature i{
+color:#2563eb;
+font-size:24px;
 }
 
 .hero-buttons{
 display:flex;
 gap:20px;
 flex-wrap:wrap;
-margin-bottom:50px;
-}
-
-.hero-badges{
-display:flex;
-flex-wrap:wrap;
-gap:16px;
-}
-
-.badge{
-background:rgba(255,255,255,.12);
-backdrop-filter:blur(10px);
-padding:12px 20px;
-border-radius:999px;
-font-weight:600;
-color:white;
 }
 
 .stats{
-margin-top:-70px;
+margin-top:-60px;
 position:relative;
-z-index:20;
+z-index:5;
+}
+
+.stats-box{
+background:white;
+border-radius:24px;
+padding:35px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
 }
 
 .stats-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:25px;
+gap:20px;
 }
 
-.stat-card{
-padding:30px;
-text-align:center;
+.stat-item{
+display:flex;
+align-items:center;
+gap:18px;
+justify-content:center;
+}
+
+.stat-item i{
+font-size:42px;
+color:#2563eb;
 }
 
 .stat-number{
-font-size:42px;
+font-size:48px;
 font-weight:900;
-color:#2563eb;
 }
 
 .stat-text{
 font-size:15px;
-margin-top:8px;
+color:#555;
 }
 
-.services-grid{
+.services-grid,
+.features-grid,
+.reviews-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:25px;
@@ -272,7 +303,7 @@ transform:translateY(-8px);
 }
 
 .service-card img{
-height:230px;
+height:260px;
 width:100%;
 object-fit:cover;
 }
@@ -282,8 +313,8 @@ padding:25px;
 }
 
 .service-content h3{
-font-size:24px;
-margin-bottom:12px;
+font-size:28px;
+margin-bottom:10px;
 }
 
 .service-content p{
@@ -303,7 +334,7 @@ border-radius:24px;
 }
 
 .work-card img{
-height:260px;
+height:280px;
 width:100%;
 object-fit:cover;
 transition:.4s;
@@ -315,161 +346,27 @@ transform:scale(1.05);
 
 .work-overlay{
 position:absolute;
-inset:0;
-background:linear-gradient(transparent,rgba(0,0,0,.8));
-display:flex;
-align-items:flex-end;
+left:0;
+right:0;
+bottom:0;
 padding:25px;
+background:linear-gradient(transparent,rgba(0,0,0,.85));
 color:white;
+font-size:22px;
 font-weight:700;
-font-size:22px;
-}
-
-.features-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:25px;
-}
-
-.feature-card{
-padding:35px 25px;
-text-align:center;
-}
-
-.feature-card i{
-font-size:32px;
-color:#2563eb;
-margin-bottom:15px;
-}
-
-.feature-card h3{
-margin-bottom:10px;
-}
-
-.steps{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:25px;
-}
-
-.step-card{
-padding:30px;
-text-align:center;
-}
-
-.step-number{
-width:60px;
-height:60px;
-border-radius:50%;
-background:#2563eb;
-color:white;
-display:flex;
-align-items:center;
-justify-content:center;
-margin:auto;
-margin-bottom:20px;
-font-weight:800;
-font-size:22px;
-}
-
-.reviews-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-}
-
-.review-card{
-padding:30px;
-}
-
-.review-stars{
-color:#facc15;
-margin-bottom:15px;
-}
-
-.calculator-wrap{
-display:grid;
-grid-template-columns:2fr 1fr;
-gap:30px;
-}
-
-.calculator-box{
-padding:35px;
-}
-
-.form-group{
-margin-bottom:20px;
-}
-
-.form-group label{
-display:block;
-margin-bottom:8px;
-font-weight:600;
-}
-
-.form-group input,
-.form-group select{
-width:100%;
-padding:16px;
-border:1px solid #ddd;
-border-radius:12px;
-font-size:16px;
-}
-
-.result-box{
-background:#2563eb;
-color:white;
-padding:35px;
-border-radius:24px;
-}
-
-.contacts-box{
-padding:50px;
-text-align:center;
-}
-
-.contacts-phone{
-font-size:48px;
-font-weight:900;
-color:#2563eb;
-margin:25px 0;
-}
-
-.contact-buttons{
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-}
-
-footer{
-background:#071633;
-color:white;
-padding:60px 0;
-margin-top:80px;
-}
-
-.footer-grid{
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-gap:20px;
 }
 
 @media(max-width:1100px){
 
 .hero h1{
-font-size:65px;
+font-size:70px;
 }
 
 .stats-grid,
 .services-grid,
-.features-grid,
-.steps,
-.reviews-grid,
-.works-grid,
-.calculator-wrap{
+features-grid,
+works-grid,
+reviews-grid{
 grid-template-columns:1fr 1fr;
 }
 
@@ -486,531 +383,18 @@ font-size:48px;
 }
 
 .hero-subtitle{
-font-size:22px;
-}
-
-.stats-grid,
-.services-grid,
-.features-grid,
-.steps,
-.reviews-grid,
-.works-grid,
-.calculator-wrap{
-grid-template-columns:1fr;
-}
-
-.section-title{
-font-size:38px;
-}
-
-.contacts-phone{
-font-size:34px;
-}
-
-}
-
-</style>
-</head>
-<body>
-
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Потолкович-ПРО | Натяжные потолки в Вологде</title>
-
-<meta name="description" content="Натяжные потолки в Вологде и области. Бесплатный замер, гарантия 15 лет, монтаж за 1 день. Световые линии, парящие потолки, теневой профиль.">
-
-<link rel="icon" href="favicon.png">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
-body{
-font-family:'Inter',sans-serif;
-background:#f5f7fb;
-color:#111;
-line-height:1.6;
-overflow-x:hidden;
-}
-
-.container{
-width:90%;
-max-width:1280px;
-margin:auto;
-}
-
-section{
-padding:90px 0;
-}
-
-h1,h2,h3,h4{
-line-height:1.1;
-}
-
-img{
-max-width:100%;
-display:block;
-}
-
-a{
-text-decoration:none;
-color:inherit;
-}
-
-.btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:18px 34px;
-border-radius:14px;
-font-weight:700;
-transition:.3s;
-cursor:pointer;
-border:none;
-}
-
-.btn-primary{
-background:#2563eb;
-color:white;
-}
-
-.btn-primary:hover{
-background:#1d4ed8;
-transform:translateY(-2px);
-}
-
-.btn-secondary{
-background:white;
-color:#111;
-}
-
-.btn-secondary:hover{
-transform:translateY(-2px);
-}
-
-.section-label{
-color:#2563eb;
-font-size:14px;
-font-weight:700;
-text-transform:uppercase;
-margin-bottom:15px;
-text-align:center;
-}
-
-.section-title{
-font-size:56px;
-font-weight:900;
-text-align:center;
-margin-bottom:60px;
-}
-
-.card{
-background:white;
-border-radius:24px;
-box-shadow:0 10px 30px rgba(0,0,0,.05);
-}
-
-header{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-z-index:999;
-}
-
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:25px 0;
-}
-
-.logo{
-width:170px;
-}
-
-.nav-menu{
-display:flex;
-gap:35px;
-font-weight:600;
-color:white;
-}
-
-.nav-menu a{
-transition:.3s;
-}
-
-.nav-menu a:hover{
-color:#60a5fa;
-}
-
-.nav-right{
-display:flex;
-align-items:center;
-gap:22px;
-}
-
-.phone-link{
-display:flex;
-align-items:center;
-gap:10px;
-font-size:18px;
-font-weight:700;
-color:white;
-}
-
-.phone-link i{
-color:#22c55e;
-font-size:18px;
-}
-
-.social-link{
-color:white;
-font-weight:600;
-transition:.3s;
-}
-
-.social-link:hover{
-color:#60a5fa;
-}
-
-.hero{
-position:relative;
-min-height:100vh;
-display:flex;
-align-items:center;
-background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-url('hero.png');
-background-size:cover;
-background-position:center;
-}
-
-.hero-content{
-max-width:760px;
-color:white;
-}
-
-.hero h1{
-font-size:88px;
-font-weight:900;
-line-height:0.95;
-margin-bottom:25px;
-}
-
-.hero-subtitle{
-font-size:28px;
-font-weight:400;
-margin-bottom:40px;
-opacity:.95;
+font-size:20px;
 }
 
 .hero-buttons{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-margin-bottom:50px;
+flex-direction:column;
 }
 
-.hero-badges{
-display:flex;
-flex-wrap:wrap;
-gap:16px;
-}
-
-.badge{
-background:rgba(255,255,255,.12);
-backdrop-filter:blur(10px);
-padding:12px 20px;
-border-radius:999px;
-font-weight:600;
-color:white;
-}
-
-.stats{
-margin-top:-70px;
-position:relative;
-z-index:20;
-}
-
-.stats-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:25px;
-}
-
-.stat-card{
-padding:30px;
-text-align:center;
-}
-
-.stat-number{
-font-size:42px;
-font-weight:900;
-color:#2563eb;
-}
-
-.stat-text{
-font-size:15px;
-margin-top:8px;
-}
-
-.services-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:25px;
-}
-
-.service-card{
-overflow:hidden;
-transition:.3s;
-}
-
-.service-card:hover{
-transform:translateY(-8px);
-}
-
-.service-card img{
-height:230px;
-width:100%;
-object-fit:cover;
-}
-
-.service-content{
-padding:25px;
-}
-
-.service-content h3{
-font-size:24px;
-margin-bottom:12px;
-}
-
-.service-content p{
-color:#666;
-}
-
-.works-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-}
-
-.work-card{
-position:relative;
-overflow:hidden;
-border-radius:24px;
-}
-
-.work-card img{
-height:260px;
-width:100%;
-object-fit:cover;
-transition:.4s;
-}
-
-.work-card:hover img{
-transform:scale(1.05);
-}
-
-.work-overlay{
-position:absolute;
-inset:0;
-background:linear-gradient(transparent,rgba(0,0,0,.8));
-display:flex;
-align-items:flex-end;
-padding:25px;
-color:white;
-font-weight:700;
-font-size:22px;
-}
-
-.features-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:25px;
-}
-
-.feature-card{
-padding:35px 25px;
-text-align:center;
-}
-
-.feature-card i{
-font-size:32px;
-color:#2563eb;
-margin-bottom:15px;
-}
-
-.feature-card h3{
-margin-bottom:10px;
-}
-
-.steps{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:25px;
-}
-
-.step-card{
-padding:30px;
-text-align:center;
-}
-
-.step-number{
-width:60px;
-height:60px;
-border-radius:50%;
-background:#2563eb;
-color:white;
-display:flex;
-align-items:center;
-justify-content:center;
-margin:auto;
-margin-bottom:20px;
-font-weight:800;
-font-size:22px;
-}
-
+.stats-grid,
+.services-grid,
+.features-grid,
+works-grid,
 .reviews-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-}
-
-.review-card{
-padding:30px;
-}
-
-.review-stars{
-color:#facc15;
-margin-bottom:15px;
-}
-
-.calculator-wrap{
-display:grid;
-grid-template-columns:2fr 1fr;
-gap:30px;
-}
-
-.calculator-box{
-padding:35px;
-}
-
-.form-group{
-margin-bottom:20px;
-}
-
-.form-group label{
-display:block;
-margin-bottom:8px;
-font-weight:600;
-}
-
-.form-group input,
-.form-group select{
-width:100%;
-padding:16px;
-border:1px solid #ddd;
-border-radius:12px;
-font-size:16px;
-}
-
-.result-box{
-background:#2563eb;
-color:white;
-padding:35px;
-border-radius:24px;
-}
-
-.contacts-box{
-padding:50px;
-text-align:center;
-}
-
-.contacts-phone{
-font-size:48px;
-font-weight:900;
-color:#2563eb;
-margin:25px 0;
-}
-
-.contact-buttons{
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-}
-
-footer{
-background:#071633;
-color:white;
-padding:60px 0;
-margin-top:80px;
-}
-
-.footer-grid{
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-gap:20px;
-}
-
-@media(max-width:1100px){
-
-.hero h1{
-font-size:65px;
-}
-
-.stats-grid,
-.services-grid,
-.features-grid,
-.steps,
-.reviews-grid,
-.works-grid,
-.calculator-wrap{
-grid-template-columns:1fr 1fr;
-}
-
-}
-
-@media(max-width:768px){
-
-.nav-menu{
-display:none;
-}
-
-.hero h1{
-font-size:48px;
-}
-
-.hero-subtitle{
-font-size:22px;
-}
-
-.stats-grid,
-.services-grid,
-.features-grid,
-.steps,
-.reviews-grid,
-.works-grid,
-.calculator-wrap{
 grid-template-columns:1fr;
 }
 
@@ -1018,15 +402,275 @@ grid-template-columns:1fr;
 font-size:38px;
 }
 
-.contacts-phone{
-font-size:34px;
-}
-
 }
 
 </style>
+
 </head>
 <body>
+
+<header>
+
+<div class="container">
+
+<div class="navbar">
+
+<a href="#">
+<img src="logo.png" class="logo" alt="Потолкович-ПРО">
+</a>
+
+<nav class="nav-menu">
+
+<a href="#services">Услуги</a>
+<a href="#works">Работы</a>
+<a href="#advantages">Преимущества</a>
+<a href="#reviews">Отзывы</a>
+<a href="#contacts">Контакты</a>
+
+</nav>
+
+<div class="nav-right">
+
+<a href="tel:+79517374433" class="phone-link">
+<i class="fa-solid fa-phone"></i>
++7 (951) 737-44-33
+</a>
+
+<a href="https://vk.com/club171564683"
+target="_blank"
+class="social-link">
+<i class="fa-brands fa-vk"></i>
+ВК
+</a>
+
+<a href="https://t.me/potolkovich_pro"
+target="_blank"
+class="social-link">
+<i class="fa-brands fa-telegram"></i>
+Telegram
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<h1>
+НАТЯЖНЫЕ<br>
+<span>ПОТОЛКИ</span><br>
+В ВОЛОГДЕ И ОБЛАСТИ
+</h1>
+
+<p class="hero-subtitle">
+Профессиональный монтаж натяжных потолков любой сложности
+</p>
+
+<div class="hero-features">
+
+<div class="hero-feature">
+<i class="fa-solid fa-shield-halved"></i>
+Гарантия 15 лет
+</div>
+
+<div class="hero-feature">
+<i class="fa-solid fa-ruler"></i>
+Бесплатный замер
+</div>
+
+<div class="hero-feature">
+<i class="fa-solid fa-bolt"></i>
+Монтаж за 1 день
+</div>
+
+<div class="hero-feature">
+<i class="fa-solid fa-award"></i>
+1000+ объектов
+</div>
+
+</div>
+
+<div class="hero-buttons">
+
+<a href="#contacts" class="btn btn-primary">
+Получить бесплатный замер
+</a>
+
+<a href="#calculator" class="btn btn-secondary">
+Рассчитать стоимость
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="container">
+
+<div class="stats-box">
+
+<div class="stats-grid">
+
+<div class="stat-item">
+
+<i class="fa-solid fa-house"></i>
+
+<div>
+<div class="stat-number">1000+</div>
+<div class="stat-text">
+Выполненных объектов
+</div>
+</div>
+
+</div>
+
+<div class="stat-item">
+
+<i class="fa-solid fa-medal"></i>
+
+<div>
+<div class="stat-number">7+</div>
+<div class="stat-text">
+Лет опыта
+</div>
+</div>
+
+</div>
+
+<div class="stat-item">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<div>
+<div class="stat-number">15</div>
+<div class="stat-text">
+Лет гарантии
+</div>
+</div>
+
+</div>
+
+<div class="stat-item">
+
+<i class="fa-solid fa-clock"></i>
+
+<div>
+<div class="stat-number">1</div>
+<div class="stat-text">
+День монтажа
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-label">
+НАШИ УСЛУГИ
+</div>
+
+<h2 class="section-title">
+Виды натяжных потолков
+</h2>
+
+<div class="services-grid">
+
+<div class="card service-card">
+
+<img src="service1.jpg" alt="Матовые потолки">
+
+<div class="service-content">
+
+<h3>Матовые потолки</h3>
+
+<p>
+Классическое решение для квартиры,
+дома или офиса.
+</p>
+
+</div>
+
+</div>
+
+<div class="card service-card">
+
+<img src="service2.jpg" alt="Световые линии">
+
+<div class="service-content">
+
+<h3>Световые линии</h3>
+
+<p>
+Современное дизайнерское освещение
+для стильных интерьеров.
+</p>
+
+</div>
+
+</div>
+
+<div class="card service-card">
+
+<img src="service3.jpg" alt="Парящие потолки">
+
+<div class="service-content">
+
+<h3>Парящие потолки</h3>
+
+<p>
+Эффект лёгкости и скрытой подсветки
+по всему периметру.
+</p>
+
+</div>
+
+</div>
+
+<div class="card service-card">
+
+<img src="service4.jpg" alt="Теневой профиль">
+
+<div class="service-content">
+
+<h3>Теневой профиль</h3>
+
+<p>
+Премиальное решение без маскировочной
+вставки по периметру.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 
 <section id="works">
 
@@ -1099,7 +743,7 @@ font-size:34px;
 </div>
 
 <h2 class="section-title">
-Наши преимущества
+Почему нам доверяют
 </h2>
 
 <div class="features-grid">
@@ -1111,7 +755,7 @@ font-size:34px;
 </div>
 
 <div class="card feature-card">
-<i class="fa-solid fa-ruler"></i>
+<i class="fa-solid fa-ruler-combined"></i>
 <h3>Бесплатный замер</h3>
 <p>Выезд специалиста по Вологде и области.</p>
 </div>
@@ -1119,13 +763,7 @@ font-size:34px;
 <div class="card feature-card">
 <i class="fa-solid fa-bolt"></i>
 <h3>Монтаж за 1 день</h3>
-<p>Большинство объектов сдаём в день монтажа.</p>
-</div>
-
-<div class="card feature-card">
-<i class="fa-solid fa-broom"></i>
-<h3>Без пыли</h3>
-<p>Используем профессиональное оборудование.</p>
+<p>Большинство объектов выполняем за один день.</p>
 </div>
 
 <div class="card feature-card">
@@ -1135,21 +773,27 @@ font-size:34px;
 </div>
 
 <div class="card feature-card">
-<i class="fa-solid fa-calendar-check"></i>
-<h3>С 2018 года</h3>
-<p>Работаем официально и дорожим репутацией.</p>
+<i class="fa-solid fa-screwdriver-wrench"></i>
+<h3>Качественные материалы</h3>
+<p>Работаем только с проверенными поставщиками.</p>
 </div>
 
 <div class="card feature-card">
 <i class="fa-solid fa-file-signature"></i>
-<h3>Работа по договору</h3>
-<p>Все условия фиксируются документально.</p>
+<h3>Договор</h3>
+<p>Все работы выполняются официально.</p>
 </div>
 
 <div class="card feature-card">
-<i class="fa-solid fa-gem"></i>
-<h3>Качественные материалы</h3>
-<p>Используем проверенные полотна и комплектующие.</p>
+<i class="fa-solid fa-broom"></i>
+<h3>Чистый монтаж</h3>
+<p>Аккуратная работа и уборка после установки.</p>
+</div>
+
+<div class="card feature-card">
+<i class="fa-solid fa-headset"></i>
+<h3>Поддержка</h3>
+<p>Всегда остаёмся на связи после монтажа.</p>
 </div>
 
 </div>
@@ -1167,7 +811,7 @@ font-size:34px;
 </div>
 
 <h2 class="section-title">
-Что говорят наши клиенты
+Что говорят наши заказчики
 </h2>
 
 <div class="reviews-grid">
@@ -1179,8 +823,9 @@ font-size:34px;
 </div>
 
 <p>
-Сделали потолок за один день. Очень аккуратно,
-быстро и без лишней грязи.
+Сделали потолок в гостиной за один день.
+Всё аккуратно и качественно.
+Результатом очень довольны.
 </p>
 
 <h4 style="margin-top:20px;">
@@ -1196,8 +841,9 @@ font-size:34px;
 </div>
 
 <p>
-Световые линии получились даже лучше,
-чем ожидали. Спасибо за качественную работу.
+Заказывали световые линии.
+Получилось очень красиво и современно.
+Рекомендуем.
 </p>
 
 <h4 style="margin-top:20px;">
@@ -1213,8 +859,8 @@ font-size:34px;
 </div>
 
 <p>
-Замер сделали бесплатно, стоимость после монтажа
-не изменилась. Рекомендую.
+Цена после замера не изменилась.
+Монтажники приехали вовремя и сделали всё быстро.
 </p>
 
 <h4 style="margin-top:20px;">
@@ -1257,49 +903,22 @@ placeholder="Например: 20">
 <label>Тип потолка</label>
 
 <select id="ceilingType">
-
-<option value="700">
-Матовый потолок
-</option>
-
-<option value="800">
-Сатиновый потолок
-</option>
-
-<option value="900">
-Глянцевый потолок
-</option>
-
-<option value="1200">
-Тканевый потолок
-</option>
-
+<option value="700">Матовый потолок</option>
+<option value="800">Сатиновый потолок</option>
+<option value="900">Глянцевый потолок</option>
+<option value="1200">Тканевый потолок</option>
 </select>
 
 </div>
 
 <div class="form-group">
-
 <label>Освещение</label>
 
 <select id="lighting">
-
-<option value="0">
-Без освещения
-</option>
-
-<option value="3000">
-До 5 светильников
-</option>
-
-<option value="6000">
-6–10 светильников
-</option>
-
-<option value="10000">
-Световые линии
-</option>
-
+<option value="0">Без освещения</option>
+<option value="3000">До 5 светильников</option>
+<option value="6000">6–10 светильников</option>
+<option value="10000">Световые линии</option>
 </select>
 
 </div>
@@ -1320,10 +939,9 @@ onclick="calculatePrice()">
 Предварительная стоимость
 </h3>
 
-<div
-id="result"
+<div id="result"
 style="
-font-size:48px;
+font-size:52px;
 font-weight:900;
 margin-bottom:20px;
 ">
@@ -1353,7 +971,7 @@ margin-bottom:20px;
 </div>
 
 <h2 style="
-font-size:52px;
+font-size:48px;
 margin-bottom:15px;
 ">
 Получите бесплатный замер
@@ -1362,26 +980,39 @@ margin-bottom:15px;
 <p style="
 font-size:20px;
 color:#666;
-margin-bottom:10px;
+margin-bottom:20px;
 ">
-Работаем по Вологде и области
+Работаем по Вологде и Вологодской области
 </p>
 
-<a
-href="tel:+79517374433"
-class="contacts-phone">
+<div class="contacts-phone">
 
-📞 +7 (951) 737-44-33
+<i class="fa-solid fa-phone"
+style="
+color:#22c55e;
+margin-right:12px;
+"></i>
+
+<a href="tel:+79517374433"
+style="
+color:#2563eb;
+font-weight:900;
+">
+
++7 (951) 737-44-33
 
 </a>
 
+</div>
+
 <div style="
+font-size:18px;
 margin-bottom:30px;
 ">
 
 ✓ Бесплатный замер<br>
 ✓ Монтаж за 1 день<br>
-✓ Более 1000 объектов
+✓ Более 1000 выполненных объектов
 
 </div>
 
@@ -1454,7 +1085,10 @@ font-size:20px;
 font-weight:700;
 ">
 
-📞 +7 (951) 737-44-33
+<i class="fa-solid fa-phone"
+style="color:#22c55e;"></i>
+
++7 (951) 737-44-33
 
 </a>
 
@@ -1464,8 +1098,8 @@ font-weight:700;
 
 <div style="
 margin-top:40px;
-opacity:.7;
 text-align:center;
+opacity:.7;
 ">
 
 © 2026 Потолкович-ПРО.
@@ -1482,18 +1116,18 @@ text-align:center;
 function calculatePrice(){
 
 const area =
-Number(document.getElementById("area").value);
+Number(document.getElementById('area').value);
 
 const ceiling =
-Number(document.getElementById("ceilingType").value);
+Number(document.getElementById('ceilingType').value);
 
 const lighting =
-Number(document.getElementById("lighting").value);
+Number(document.getElementById('lighting').value);
 
-if(area <= 0 || isNaN(area)){
+if(area <= 0){
 
-document.getElementById("result").innerHTML =
-"Введите площадь";
+document.getElementById('result').innerHTML =
+'Введите площадь';
 
 return;
 
@@ -1502,8 +1136,8 @@ return;
 const total =
 (area * ceiling) + lighting;
 
-document.getElementById("result").innerHTML =
-total.toLocaleString("ru-RU") + " ₽";
+document.getElementById('result').innerHTML =
+total.toLocaleString('ru-RU') + ' ₽';
 
 }
 
