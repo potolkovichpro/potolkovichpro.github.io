@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Потолкович-Про | Натяжные потолки в Вологде</title>
+
+<meta name="yandex-verification" content="ae5bb02abfe16890" />
+
+<meta name="description" content="Натяжные потолки в Вологде и Вологодской области. Бесплатный замер, гарантия 15 лет, монтаж за 1 день. Матовые, глянцевые, тканевые потолки, световые линии и теневой профиль.">
+
+<meta name="keywords" content="натяжные потолки Вологда, натяжной потолок Вологда, потолки Вологда цена, монтаж потолков Вологда, установка натяжных потолков Вологда, матовые потолки Вологда, глянцевые потолки Вологда, тканевые потолки Вологда, световые линии Вологда, теневой профиль Вологда">
+
+<meta name="robots" content="index,follow">
+<meta name="author" content="Потолкович-Про">
+<meta name="geo.region" content="RU-VLG">
+<meta name="geo.placename" content="Вологда">
+
+<meta property="og:title" content="Потолкович-Про | Натяжные потолки в Вологде">
+<meta property="og:description" content="Бесплатный замер, гарантия 15 лет, монтаж за 1 день.">
+<meta property="og:image" content="hero.png">
+<meta property="og:type" content="website">
+
+<link rel="icon" type="image/png" href="favicon.png">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f7fb;
+color:#222;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+}
+
+header{
+position:relative;
+min-height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.70)),
+url("hero.png");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:40px 20px;
+
+color:white;
+text-align:center;
+}
+
+.topbar{
+position:absolute;
+top:25px;
+left:0;
+right:0;
+
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+
+padding:0 60px;
+
+z-index:100;
+}
+
+.logo-block{
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+}
+
+.logo{
+width:180px;
+height:auto;
+filter:drop-shadow(0 0 20px rgba(15,98,254,.35));
+}
+
+.contacts{
+display:flex;
+align-items:center;
+gap:28px;
+
+font-size:18px;
+font-weight:700;
+}
+
+.contacts a{
+display:flex;
+align-items:center;
+gap:8px;
+color:white;
+transition:.3s;
+}
+
+.contacts a:hover{
+opacity:.85;
+}
+
+.contacts img{
+width:24px;
+height:24px;
+}
+
+.hero-content{
+max-width:1100px;
+position:relative;
+z-index:10;
+}
+
+.hero-content h1{
+font-size:82px;
+font-weight:900;
+line-height:1.1;
+margin-bottom:25px;
+
+text-shadow:
+0 5px 25px rgba(0,0,0,.6);
+}
+
+.hero-content p{
+font-size:32px;
+line-height:1.6;
+margin-bottom:40px;
+text-shadow:
+0 4px 20px rgba(0,0,0,.7);
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:45px;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:20px 42px;
+
+border-radius:60px;
+
+font-size:20px;
+font-weight:700;
+
+transition:.3s;
+}
+
+.btn-primary{
+background:#0f62fe;
+color:white;
+}
+
+.btn-primary:hover{
+background:#004fd6;
+transform:translateY(-2px);
+}
+
+.btn-secondary{
+background:white;
+color:#0f62fe;
+}
+
+.btn-secondary:hover{
+transform:translateY(-2px);
+}
+
+.hero-features{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+}
+
+.hero-features span{
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(10px);
+
+padding:14px 24px;
+
+border-radius:40px;
+
+font-size:18px;
+font-weight:700;
+}
+
+section{
+padding:90px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-size:48px;
+font-weight:800;
+margin-bottom:55px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:24px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.06);
+
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+font-size:24px;
+margin-bottom:15px;
+color:#0f62fe;
+}
+
+.card p{
+font-size:17px;
+line-height:1.7;
+}
+
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+
+@media(max-width:768px){
+
+.topbar{
+position:absolute;
+top:15px;
+
+padding:0 12px;
+
+flex-direction:column;
+align-items:center;
+gap:15px;
+}
+
+.logo{
+width:120px;
+}
+
+.contacts{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+
+gap:12px;
+
+font-size:13px;
+}
+
+.contacts a{
+gap:5px;
+}
+
+.contacts img{
+width:18px;
+height:18px;
+}
+
+.hero-content{
+margin-top:120px;
+}
+
+.hero-content h1{
+font-size:52px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero-content p{
+font-size:22px;
+line-height:1.5;
+margin-bottom:30px;
+}
+
+.btn{
+width:100%;
+max-width:320px;
+font-size:18px;
+}
+
+.hero-features{
+gap:12px;
+}
+
+.hero-features span{
+font-size:15px;
+padding:12px 18px;
+}
+
+.section-title{
+font-size:34px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="topbar">
+
+<div class="logo-block">
+<img src="logo.png" class="logo" alt="Потолкович-Про">
+</div>
+
+<div class="contacts">
+
+<a href="tel:+79646713082">
+📞 +7 (964) 671-30-82
+</a>
+
+<a href="https://vk.com/club171564683" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/145/145813.png">
+ВКонтакте
+</a>
+
+<a href="https://t.me/potolkovich_pro" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
+Telegram
+</a>
+
+<a href="https://instagram.com/" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+Instagram
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-content">
+
+<h1>
+Натяжные потолки в Вологде
+</h1>
+
+<p>
+Бесплатный замер • Гарантия 15 лет • Монтаж за 1 день 
+</p>
+
+<div class="buttons">
+
+<a class="btn btn-primary" href="tel:+79646713082">
+Бесплатный замер
+</a>
+
+<a class="btn btn-secondary" href="#calculator">
+Рассчитать стоимость
+</a>
+
+</div>
+
+<div class="hero-features">
+
+<span>✓ Бесплатный выезд</span>
+
+<span>✓ Работа без пыли</span>
+
+<span>✓ Более 1000 объектов</span>
+
+<span>✓ Более 7 лет опыта</span>
+
+</div>
+
+</div>
+
+</header>
+<section>
+
+<h2 class="section-title">
+Наши услуги
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Матовые потолки</h3>
+<p>
+Классический вариант без бликов и отражений. Подходит для любых помещений.
+</p>
+</div>
+
+<div class="card">
+<h3>Глянцевые потолки</h3>
+<p>
+Зеркальный эффект визуально увеличивает пространство и высоту помещения.
+</p>
+</div>
+
+<div class="card">
+<h3>Тканевые потолки</h3>
+<p>
+Экологичные, прочные и устойчивые к перепадам температуры.
+</p>
+</div>
+
+<div class="card">
+<h3>Сатиновые потолки</h3>
+<p>
+Идеальный баланс между матовой и глянцевой фактурой.
+</p>
+</div>
+
+<div class="card">
+<h3>Световые линии</h3>
+<p>
+Современное дизайнерское освещение для стильных интерьеров.
+</p>
+</div>
+
+<div class="card">
+<h3>Теневой профиль</h3>
+<p>
+Премиальное решение с эффектом парящего потолка без вставок.
+</p>
+</div>
+
+<div class="card">
+<h3>Парящие потолки</h3>
+<p>
+Создают эффект легкости и визуального увеличения пространства.
+</p>
+</div>
+
+<div class="card">
+<h3>Потолки с подсветкой</h3>
+<p>
+Дополнительное освещение и эффектный внешний вид помещения.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Почему выбирают нас
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🛡 Гарантия 15 лет</h3>
+<p>
+Используем качественные материалы и официальную гарантию на работы.
+</p>
+</div>
+
+<div class="card">
+<h3>📏 Бесплатный замер</h3>
+<p>
+Выезд специалиста по Вологде и области без дополнительной оплаты.
+</p>
+</div>
+
+<div class="card">
+<h3>⚡ Монтаж за 1 день</h3>
+<p>
+Большинство объектов устанавливаем в течение одного рабочего дня.
+</p>
+</div>
+
+<div class="card">
+<h3>✨ Без пыли и мусора</h3>
+<p>
+Используем профессиональный инструмент с пылеудалением.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Как мы работаем
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>1. Бесплатный замер</h3>
+<p>
+Выезжаем на объект, выполняем замеры и консультируем по материалам.
+</p>
+</div>
+
+<div class="card">
+<h3>2. Закупка материалов</h3>
+<p>
+Изготавливаем полотно по вашим размерам и подготавливаем комплектующие.
+</p>
+</div>
+
+<div class="card">
+<h3>3. Монтаж</h3>
+<p>
+Устанавливаем потолок за 1 день и сдаем полностью готовый объект.
+</p>
+</div>
+
+</div>
+
+</section>
+
+  <section id="calculator">
+
+<h2 class="section-title">
+Калькулятор стоимости
+</h2>
+
+<div class="card" style="max-width:700px;margin:auto;">
+
+<label><strong>Площадь помещения (м²)</strong></label>
+
+<input
+type="number"
+id="area"
+placeholder="Например: 20"
+style="width:100%;padding:15px;margin:10px 0 20px;border-radius:12px;border:1px solid #ddd;font-size:18px;"
+>
+
+<label><strong>Тип потолка</strong></label>
+
+<select
+id="ceilingType"
+style="width:100%;padding:15px;margin:10px 0 20px;border-radius:12px;border:1px solid #ddd;font-size:18px;"
+>
+<option value="700">Матовый</option>
+<option value="800">Сатиновый</option>
+<option value="900">Глянцевый</option>
+<option value="1200">Тканевый</option>
+</select>
+
+<label><strong>Освещение</strong></label>
+
+<select
+id="lighting"
+style="width:100%;padding:15px;margin:10px 0 20px;border-radius:12px;border:1px solid #ddd;font-size:18px;"
+>
+<option value="0">Без светильников</option>
+<option value="3000">До 5 светильников</option>
+<option value="6000">6–10 светильников</option>
+<option value="10000">Световые линии</option>
+</select>
+
+<button
+onclick="calculatePrice()"
+class="btn btn-primary"
+style="width:100%;border:none;cursor:pointer;"
+>
+Рассчитать стоимость
+</button>
+
+<h3
+id="result"
+style="text-align:center;margin-top:25px;color:#0f62fe;font-size:30px;"
+>
+</h3>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+Наши работы
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="hero.png" style="width:100%;border-radius:15px;margin-bottom:15px;">
+<h3>Современная гостиная</h3>
+</div>
+
+<div class="card">
+<img src="hero.png" style="width:100%;border-radius:15px;margin-bottom:15px;">
+<h3>Потолок со световыми линиями</h3>
+</div>
+
+<div class="card">
+<img src="hero.png" style="width:100%;border-radius:15px;margin-bottom:15px;">
+<h3>Теневой профиль</h3>
+</div>
+
+</div>
+
+</section>
+<section id="contact">
+
+<h2 class="section-title">
+Контакты
+</h2>
+
+<div class="contact">
+
+<h2>
+Получить бесплатный замер
+</h2>
+
+<div class="phone">
+📞 +7 (964) 671-30-82
+</div>
+
+<p style="font-size:20px;margin-top:20px;">
+Работаем ежедневно по Вологде и Вологодской области
+</p>
+
+<div style="
+margin-top:35px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+">
+
+<a
+href="tel:+79646713082"
+class="btn btn-secondary"
+>
+Позвонить
+</a>
+
+<a
+href="https://t.me/potolkovich_pro"
+target="_blank"
+class="btn btn-secondary"
+>
+Telegram
+</a>
+
+<a
+href="https://vk.com/club171564683"
+target="_blank"
+class="btn btn-secondary"
+>
+ВКонтакте
+</a>
+
+<a
+href="https://instagram.com/"
+target="_blank"
+class="btn btn-secondary"
+>
+Instagram
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div style="max-width:1200px;margin:auto;">
+
+<h3 style="margin-bottom:15px;">
+Потолкович-Про
+</h3>
+
+<p>
+Натяжные потолки в Вологде и Вологодской области
+</p>
+
+<p style="margin-top:10px;">
+Телефон: +7 (964) 671-30-82
+</p>
+
+<p style="margin-top:10px;">
+Гарантия 15 лет • Бесплатный замер • Монтаж за 1 день
+</p>
+
+<p style="margin-top:25px;color:#999;">
+© 2026 Потолкович-Про. Все права защищены.
+</p>
+
+</div>
+
+</footer>
+
+<script>
+function calculatePrice() {
+
+const area = Number(document.getElementById("area").value);
+const ceiling = Number(document.getElementById("ceilingType").value);
+const lighting = Number(document.getElementById("lighting").value);
+
+if (area <= 0 || isNaN(area)) {
+document.getElementById("result").innerHTML =
+"Введите площадь помещения";
+return;
+}
+
+const total = area * ceiling + lighting;
+
+document.getElementById("result").innerHTML =
+"Примерная стоимость: <br><strong>" +
+total.toLocaleString("ru-RU") +
+" ₽</strong>";
+
+}
+</script>
+  
+</body>
+</html>
