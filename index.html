@@ -791,3 +791,310 @@ Telegram
 </div>
 
 </section>
+
+<section id="reviews">
+
+<div class="container">
+
+<div class="section-subtitle">
+ОТЗЫВЫ КЛИЕНТОВ
+</div>
+
+<h2>
+Что говорят наши клиенты
+</h2>
+
+<div class="reviews">
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+Сделали потолок в гостиной за один день.
+Работа выполнена очень аккуратно.
+Результатом довольны на 100%.
+</p>
+
+<h4 style="margin-top:15px;">
+Александр
+</h4>
+
+</div>
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+Очень понравились световые линии.
+Получилось даже лучше чем ожидали.
+Спасибо за качественную работу.
+</p>
+
+<h4 style="margin-top:15px;">
+Елена
+</h4>
+
+</div>
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+Замер сделали бесплатно.
+Цена после монтажа не изменилась.
+Рекомендую компанию.
+</p>
+
+<h4 style="margin-top:15px;">
+Сергей
+</h4>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="calculator">
+
+<div class="container">
+
+<div class="section-subtitle">
+КАЛЬКУЛЯТОР СТОИМОСТИ
+</div>
+
+<h2>
+Рассчитать стоимость потолка
+</h2>
+
+<div class="calc">
+
+<div class="calc-form">
+
+<label>
+Площадь помещения (м²)
+</label>
+
+<input
+type="number"
+id="area"
+placeholder="Например: 20"
+>
+
+<label>
+Тип потолка
+</label>
+
+<select id="ceilingType">
+
+<option value="700">
+Матовый
+</option>
+
+<option value="800">
+Сатиновый
+</option>
+
+<option value="900">
+Глянцевый
+</option>
+
+<option value="1200">
+Тканевый
+</option>
+
+</select>
+
+<label>
+Освещение
+</label>
+
+<select id="lighting">
+
+<option value="0">
+Без светильников
+</option>
+
+<option value="3000">
+До 5 светильников
+</option>
+
+<option value="6000">
+6–10 светильников
+</option>
+
+<option value="10000">
+Световые линии
+</option>
+
+</select>
+
+<a
+class="btn btn-primary"
+onclick="calculatePrice()"
+style="cursor:pointer;"
+>
+Рассчитать стоимость
+</a>
+
+</div>
+
+<div class="calc-result">
+
+<h3>
+Предварительная стоимость
+</h3>
+
+<div
+id="result"
+style="
+font-size:42px;
+font-weight:800;
+margin-top:25px;
+"
+>
+Введите параметры
+</div>
+
+<p style="margin-top:25px;">
+Точная стоимость определяется после бесплатного замера.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<div class="section-subtitle">
+КОНТАКТЫ
+</div>
+
+<h2 style="margin-bottom:20px;">
+Получите бесплатный замер
+</h2>
+
+<p style="
+font-size:20px;
+margin-bottom:25px;
+">
+Работаем по Вологде и Вологодской области
+</p>
+
+<a
+href="tel:+79517374433"
+class="contact-phone"
+>
+📞 +7 (951) 737-44-33
+</a>
+
+<div class="contact-buttons">
+
+<a
+href="tel:+79517374433"
+class="btn btn-primary"
+>
+Позвонить
+</a>
+
+<a
+href="https://t.me/potolkovich_pro"
+target="_blank"
+class="btn btn-secondary"
+>
+Telegram
+</a>
+
+<a
+href="https://vk.com/club171564683"
+target="_blank"
+class="btn btn-secondary"
+>
+ВКонтакте
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+
+<h3>
+Потолкович-ПРО
+</h3>
+
+<p style="margin-top:15px;">
+Натяжные потолки в Вологде и Вологодской области
+</p>
+
+<p style="margin-top:15px;">
+📞 +7 (951) 737-44-33
+</p>
+
+<p style="margin-top:25px;opacity:.7;">
+© 2026 Потолкович-ПРО. Все права защищены.
+</p>
+
+</div>
+
+</footer>
+
+<script>
+
+function calculatePrice(){
+
+const area =
+Number(document.getElementById("area").value);
+
+const ceiling =
+Number(document.getElementById("ceilingType").value);
+
+const lighting =
+Number(document.getElementById("lighting").value);
+
+if(area <= 0 || isNaN(area)){
+
+document.getElementById("result").innerHTML =
+"Введите площадь";
+
+return;
+
+}
+
+const total =
+(area * ceiling) + lighting;
+
+document.getElementById("result").innerHTML =
+total.toLocaleString("ru-RU") + " ₽";
+
+}
+
+</script>
+
+</body>
+</html>
